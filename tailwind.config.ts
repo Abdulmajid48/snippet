@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        fullbg: "#0a192f ",
+        lightgreen: "#64ffda",
+        article: "#8892b0",
+      },
+      fontFamily: {
+        "ubuntu-mono": ['"Ubuntu Mono"', "monospace"],
       },
     },
   },
