@@ -14,9 +14,11 @@ const config: Config = {
         fullbg: "#0a192f ",
         lightgreen: "#64ffda",
         article: "#8892b0",
+        name: "#ccd6f6",
       },
       fontFamily: {
         "ubuntu-mono": ['"Ubuntu Mono"', "monospace"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },
