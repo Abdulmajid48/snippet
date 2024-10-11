@@ -19,6 +19,7 @@ const config: Config = {
       fontFamily: {
         "ubuntu-mono": ['"Ubuntu Mono"', "monospace"],
         roboto: ["Roboto", "sans-serif"],
+        sans: ["var(--font-roboto)", "sans-serif"],
       },
     },
   },

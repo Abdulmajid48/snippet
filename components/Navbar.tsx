@@ -7,6 +7,7 @@ interface Navlinks {
   number: string;
   link: string;
 }
+
 const Navbar: FC = () => {
   const [matches, setMatches] = useState(
     window.matchMedia("(max-width: 760px)").matches
@@ -19,9 +20,9 @@ const Navbar: FC = () => {
   }, []);
 
   return (
-    <div className="w-dvw z-40">
-      {matches ? <MobileNavbar /> : <DesktopNavbar />}
-    </div>
+      <div className="w-dvw z-40">
+        {matches ? <MobileNavbar /> : <DesktopNavbar />}
+      </div>
   );
 };
 

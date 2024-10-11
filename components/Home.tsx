@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <section>
-      <div className=" z-0 h-auto w-dvw flex flex-col gap-2 px-8 mx-auto sm:px-32 pt-20 font-semibold mb-20">
-        <motion.p
+      <div className=" z-0 h-auto w-dvw flex flex-col gap-2 pl-8 sm:pl-20 pt-20 font-semibold mb-20">
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="hover:underline text-lightgreen"
+          className="hover:underline text-lightgreen font-ubuntu-mono font-normal"
         >
           Hi, my name is
-        </motion.p>
+        </motion.div>
         <br />
         <motion.div
           initial={{ x: 200, opacity: 0 }}
