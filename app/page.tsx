@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 
 const page = () => {
   return (
-    <div className="bg-fullbg h-full font-roboto relative overflow-hidden">
+    <div className="bg-fullbg h-auto font-roboto relative overflow-hidden">
       <header>
         <Navbar />
       </header>

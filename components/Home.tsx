@@ -31,7 +31,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-article font-normal w-auto sm:w-11/12 md:w-[75%] pr-3 leading-6 text-base"
+          className="text-article font-normal w-auto sm:w-11/12 md:w-[65%] pr-3 leading-6 text-base"
         >
           I&apos;m a software engineer with two years of experience,
           specializing in web development with a strong background in Git,

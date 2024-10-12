@@ -20,9 +20,9 @@ const Navbar: FC = () => {
   }, []);
 
   return (
-      <div className="w-dvw z-40">
-        {matches ? <MobileNavbar /> : <DesktopNavbar />}
-      </div>
+    <div className="w-dvw z-40">
+      {matches ? <MobileNavbar /> : <DesktopNavbar />}
+    </div>
   );
 };
 
