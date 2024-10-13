@@ -2,20 +2,17 @@
 import Link from "next/link";
 import { Navlinks, navLinks } from "./Navbar";
 import { AlignJustify, X, Zap } from "lucide-react";
-import { type FC, useState } from "react";
+import { useContext, type FC } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { UserContext, UserContextType} from "@/app/page";
 
-interface SidebarProps {
-  toggle: boolean;
-}
-const MobileNavbar = () => {
-  // Toggle menu Bar for Mobile view
-  const [toggle, setToggle] = useState<boolean>(false);
+const MobileNavbar: FC = () => {
+  const context = useContext(UserContext);
+  if (!context) {
+    throw new Error("MobileNavbar must be used within a UserContext.Provider");
+  }
+  const { menuButton, toggle, setToggle } = context;
 
-  // Control Menu Bar for Mobile View
-  const Menubutton = (): void => {
-    setToggle((prev: boolean) => !prev);
-  };
   return (
     <div className="">
       <nav className="z-20 bg-fullbg fixed flex flex-row justify-between items-center py-2 px-2 h-10 w-dvw">
@@ -23,7 +20,7 @@ const MobileNavbar = () => {
         <div>
           <Zap strokeWidth={1.25} size={40} color=" #64ffda" />
         </div>
-        <div onClick={Menubutton}>
+        <div onClick={menuButton}>
           {toggle ? (
             <motion.div
               initial={{}}
@@ -37,13 +34,14 @@ const MobileNavbar = () => {
           )}
         </div>
       </nav>
-      <Sidebar toggle={toggle} />
+      <Sidebar toggle={toggle} setToggle={setToggle} />
     </div>
   );
 };
 
+
 // Mobile View Side Bar
-const Sidebar: FC<SidebarProps> = ({ toggle }) => {
+const Sidebar: FC<UserContextType> = ({ toggle, setToggle }) => {
   return (
     <div>
       <AnimatePresence>
@@ -61,7 +59,11 @@ const Sidebar: FC<SidebarProps> = ({ toggle }) => {
                 {navLinks.map((item, index) => {
                   const { name, number, link }: Navlinks = item;
                   return (
-                    <Link key={index} href={link}>
+                    <Link
+                      key={index}
+                      href={link}
+                      onClick={() => setToggle(false)}
+                    >
                       <div className="flex flex-col align-middle text-center">
                         <span className="text-lightgreen">{number}</span>
                         <p>{name}</p>

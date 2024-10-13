@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <section>
-      <div className=" z-0 h-auto w-dvw flex flex-col gap-2 pl-8 sm:pl-20 pt-20 font-semibold mb-20">
+    <section id="home">
+      <div className=" z-0 h-auto w-dvw flex flex-col gap-2 pl-6 sm:pl-[4rem] md:pl-20 pt-20 font-semibold mb-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
