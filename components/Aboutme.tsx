@@ -11,7 +11,9 @@ const Aboutme = () => {
   return (
     <section id="about">
       <div className=" w-11/12 md:w-3/4 m-auto mt-40">
-        <SectionTopic sectionnumber="01." sectionname=" About Me" />
+        <div className="mb-5 w-11/12 m-auto sm:m-0">
+          <SectionTopic sectionnumber="01." sectionname=" About Me" />
+        </div>
         <div className="flex flex-col md:flex-row gap-5 md:justify-center md:items-start mt-8">
           <motion.article
             initial={{ opacity: 0, y: 200 }}
@@ -74,7 +76,7 @@ const Aboutme = () => {
 const SectionTopic: FC<SectionType> = (props: SectionType) => {
   const { sectionnumber, sectionname } = props;
   return (
-    <div className="m-auto md:m-0 flex flex-col md:flex-row justify-start items-start md:items-center gap-2 w-11/12 mb-5 text-name text-2xl font-ubuntu-mono">
+    <div className="m-auto md:m-0 flex flex-col md:flex-row justify-start items-start md:items-center gap-2 w-11/12 mx-0 text-name text-2xl font-ubuntu-mono">
       <div>
         <span className="font-ubuntu-mono text-lightgreen text-base">
           {sectionnumber}

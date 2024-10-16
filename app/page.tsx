@@ -1,6 +1,8 @@
 "use client";
 
 import Aboutme from "@/components/Aboutme";
+import Built from "@/components/Built";
+import Contactme from "@/components/Contactme";
 import Home from "@/components/Home";
 import Navbar from "@/components/Navbar";
 import Worked from "@/components/Worked";
@@ -45,6 +47,8 @@ const Page = () => {
           <Home />
           <Aboutme />
           <Worked />
+          <Built/>
+          <Contactme/>
         </motion.main>
       </div>
     </UserContext.Provider>

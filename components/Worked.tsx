@@ -1,6 +1,7 @@
-import { useState, type FC } from "react";
+import { useContext, useState, type FC } from "react";
 import { SectionTopic } from "./Aboutme";
 import { motion } from "framer-motion";
+import { UserContext } from "@/app/page";
 
 interface Workgridtype {
   name: string;
@@ -10,11 +11,23 @@ interface Workgridtype {
 }
 
 const Worked = () => {
+
+   const context = useContext(UserContext);
+   if (!context) {
+     throw new Error("MobileNavbar must be used within a UserContext.Provider");
+   }
   return (
-    <section className="my-20" id="experience">
-      <div className="w-5/6 m-auto md:w-3/4 md:m-auto">
-        <SectionTopic sectionnumber="02." sectionname=" Where I've worked" />
-        <Workgrid />
+    <section id="experience" className="sm:mt-40 mt-20">
+      <div className="flex flex-row justify-center items-center md:w-1/2 m-auto w-4/5">
+        <motion.div
+          className=""
+          initial={{ scale: 1.5 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <SectionTopic sectionnumber="02." sectionname=" Where I've worked" />
+          <Workgrid />
+        </motion.div>
       </div>
     </section>
   );
@@ -38,7 +51,7 @@ const Workgrid: FC = () => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row gap-2">
+    <div className="flex flex-col sm:flex-row gap-2 mt-5 sm:mt-10 ">
       <div className="w-auto">
         <Workplacename
           HandleSelect={HandleSelect}
@@ -64,12 +77,12 @@ const Workplacename: FC<{
         return (
           <div
             key={workindex}
-            className="flex flex-col-reverse sm:flex-row gap-0 py-1 cursor-pointer relative w-20 sm:w-28"
+            className="flex flex-col-reverse sm:flex-row gap-0 py-1 cursor-pointer relative w-16 sm:w-28"
             onClick={() => HandleSelect(workindex)}
           >
             {isSelected && (
               <motion.div
-                className="absolute sm:left-0 w-20 h-1 sm:w-1 sm:h-10 bg-lightgreen rounded-md"
+                className="absolute sm:left-0 w-16 h-1 sm:w-1 sm:h-10 bg-lightgreen rounded-md"
                 layoutId="indicator"
                 transition={{
                   type: "spring",
@@ -97,19 +110,22 @@ const Workdetails: FC<{ selectedWorkplace: Workgridtype | null }> = ({
   return (
     <div>
       {selectedWorkplace && (
-        <div>
-          {selectedWorkplace.map((item, index) => {
-            const { duration, functions, jobtype } = item;
-            return (
-              <div key={index}>
-                <ul className="list-greek list-inside">
-                  <li key={index} className="mb-2">
-                    {functions.map((item, index))}
-                  </li>
-                </ul>
-              </div>
-            );
-          })}
+        <div className=" grid grid-cols-1 gap-2 pt-1">
+          {/* Display jobtype and duration */}
+          <div className="text-xl  text-name font-semibold">
+            {selectedWorkplace.jobtype}
+          </div>
+          <div className="font-ubuntu-mono text-name">
+            {selectedWorkplace.duration}
+          </div>
+          <ul className="list-greek list-inside text-article">
+            {/* Iterate through functions */}
+            {selectedWorkplace.functions.map((func, index) => (
+              <li key={index} className="mb-2">
+                {func}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
