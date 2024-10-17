@@ -7,17 +7,25 @@ interface Navlinks {
   number: string;
   link: string;
 }
- export const resume =
-   "https://drive.google.com/file/d/1-COEwJtG796gNmroKQcO1RpqudMt6r5D/view";
+export const resume =
+  "https://drive.google.com/file/d/1-COEwJtG796gNmroKQcO1RpqudMt6r5D/view";
 const Navbar: FC = () => {
-  const [matches, setMatches] = useState(
-    window.matchMedia("(max-width: 760px)").matches
-  );
+  const [matches, setMatches] = useState(false);
 
   useEffect(() => {
-    window
-      .matchMedia("(max-width: 760px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
+    // Check if we are in the browser
+    if (typeof window !== "undefined") {
+      const mediaQueryList = window.matchMedia("(max-width: 760px)");
+      setMatches(mediaQueryList.matches);
+
+      const listener = (e: MediaQueryListEvent) => setMatches(e.matches);
+      mediaQueryList.addEventListener("change", listener);
+
+      // Cleanup listener on component unmount
+      return () => {
+        mediaQueryList.removeEventListener("change", listener);
+      };
+    }
   }, []);
 
   return (
