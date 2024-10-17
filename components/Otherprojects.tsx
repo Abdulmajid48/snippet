@@ -40,7 +40,7 @@ const Project: FC<ProjectProps> = (props) => {
       initial={{ borderTop: "2px solid #64ffda", height: "100%" }}
       whileInView={{ borderTop: "0px solid #64ffda" }}
       transition={{ duration: 1 }}
-      className="bg-[#112240] w-1/2 max-h-80 px-5 py-5 rounded-md flex flex-col gap-5 hover:border-b-2 border-b-lightgreen"
+      className="bg-[#112240] w-11/12 sm:w-1/2 max-h-80 px-5 py-5 rounded-md flex flex-col gap-5 hover:border-b-2 border-b-lightgreen"
     >
       <div className="flex flex-row justify-between">
         <div style={{ color: "#64ffda" }}>
