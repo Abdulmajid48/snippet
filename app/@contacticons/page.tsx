@@ -1,9 +1,6 @@
 "use client";
 
-import GitHubIcon from "@mui/icons-material/GitHub";
-import XIcon from "@mui/icons-material/X";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { linkList } from "@/components/Contactme";
 import Link from "next/link";
 
 export default function ContacticonsPage() {
@@ -23,22 +20,3 @@ export default function ContacticonsPage() {
     </div>
   );
 }
-
-const linkList = [
-  {
-    linkIcon: <GitHubIcon />,
-    href: "https://github.com/Abdulmajid48",
-  },
-  {
-    linkIcon: <LinkedInIcon />,
-    href: "https://www.linkedin.com/in/abdul-majid-aladejana/",
-  },
-  {
-    linkIcon: <XIcon />,
-    href: "",
-  },
-  {
-    linkIcon: <InstagramIcon />,
-    href: "",
-  },
-];

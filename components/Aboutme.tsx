@@ -22,24 +22,23 @@ const Aboutme = () => {
             className="w-11/12 m-auto md:w-4/5 text-article grid grid-cols-1 gap-10 text-base font-roboto"
           >
             <p>
-              In my role as a frontend developer, I leverage my expertise in
-              React, Typescript, and Next.js to craft captivating user
-              interfaces that guarantee a seamless and visually engaging user
-              experience.
+              As a frontend developer, I specialize in creating dynamic,
+              user-friendly interfaces using React, TypeScript, and Next.js,
+              ensuring smooth and visually appealing user experiences
             </p>
             <p>
-              My skill set extends beyond frontend development, as I possess
-              hands-on experience in building basic backends for personal
-              projects and production-ready applications.
+              Beyond frontend work, I have practical experience building
+              backends for both personal projects and production applications,
+              giving me a well-rounded development background.
             </p>
             <p>
-              My familiarity with frameworks like Tailwind and Material UI adds
-              versatility to my toolkit, allowing me to create stylish and
-              functional web applications.
+              I’m also proficient with frameworks like Tailwind, Shadcn UI,
+              Daisy UI and Material UI, which allow me to design sleek,
+              responsive, and functional web applications.
             </p>
             <p>
-              While I consider myself a generalist, my primary focus remains
-              dedicated to the realm of frontend development..
+              While I consider myself a generalist, my main focus lie in
+              frontend development.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
             <ul className="font-ubuntu-mono grid grid-cols-2 gap-x-8 w-1/2 md:w-4/5 m-auto list-greek list-inside">
@@ -49,6 +48,7 @@ const Aboutme = () => {
               <li>Node JS</li>
               <li>Typescript</li>
               <li>Tailwind</li>
+              <li>Postgresql</li>
             </ul>
           </motion.article>
           <motion.figure

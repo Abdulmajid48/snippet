@@ -11,11 +11,10 @@ interface Workgridtype {
 }
 
 const Worked = () => {
-
-   const context = useContext(UserContext);
-   if (!context) {
-     throw new Error("MobileNavbar must be used within a UserContext.Provider");
-   }
+  const context = useContext(UserContext);
+  if (!context) {
+    throw new Error("MobileNavbar must be used within a UserContext.Provider");
+  }
   return (
     <section id="experience" className="sm:mt-40 mt-20">
       <div className="flex flex-row justify-center items-center md:w-1/2 m-auto w-4/5">
@@ -133,47 +132,46 @@ const Workdetails: FC<{ selectedWorkplace: Workgridtype | null }> = ({
 };
 const Workplace: Workgridtype[] = [
   {
-    name: "Qpay",
-    jobtype: "Software Engineer @ Flincap",
-    duration: "May 2023 - Jan 2024",
+    name: "Agromart",
+    jobtype: "Fullstack developer",
+    duration: "",
     functions: [
-      "As a collaborative frontend developer, I led a comprehensive website overhaul with a talented team,",
-      "I actively contributed to design discussions, proposing implementation strategies to ensure a seamless user experience. I actively contributed to design discussions, proposing implementation strategies to ensure a seamless user experience.",
-      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a weekly basis",
-      "I collaborated with backend developers, we integrated front end components with RESTful APIs.",
+      "I developed a fullstack app and Leveraged Material UI, Shadcn UI and other visually appealing UI components using",
+      "React",
+      "Tailwind",
+      "Nodejs",
+      "Postgresql",
     ],
   },
   {
-    name: "Mpay",
-    jobtype: "",
+    name: "Vesto",
+    jobtype: "Frontend Developer",
     duration: "",
     functions: [
-      "wwwAs a collaborative frontend developer, I led a comprehensive website overhaul with a talented team,",
-      "I actively contributed to design discussions, proposing implementation strategies to ensure a seamless user experience. I actively contributed to design discussions, proposing implementation strategies to ensure a seamless user experience.",
-      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a weekly basis",
-      "I collaborated with backend developers, we integrated front end components with RESTful APIs.",
+      "I deveoped financial account app and Leveraged Material UI, and other visually appealing UI using",
+      " Nextjs",
+      "Tailwind",
+      "Typescript",
     ],
   },
   {
-    name: "Tpay",
-    jobtype: "",
+    name: "Cryptland",
+    jobtype: "Frontend Developer",
     duration: "",
     functions: [
-      "As a collaborative frontend developer, I led a comprehensive website overhaul with a talented team,",
-      "I actively contributed to design discussions, proposing implementation strategies to ensure a seamless user experience. I actively contributed to design discussions, proposing implementation strategies to ensure a seamless user experience.",
-      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a weekly basis",
-      "I collaborated with backend developers, we integrated front end components with RESTful APIs.",
+      "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
+      "React",
+      "Tailwind",
     ],
   },
   {
-    name: "Spay",
-    jobtype: "",
+    name: "Stract",
+    jobtype: "Frontend Developer",
     duration: "",
     functions: [
-      "As a collaborative frontend developer, I led a comprehensive website overhaul with a talented team,",
-      "I actively contributed to design discussions, proposing implementation strategies to ensure a seamless user experience. I actively contributed to design discussions, proposing implementation strategies to ensure a seamless user experience.",
-      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a weekly basis",
-      "I collaborated with backend developers, we integrated front end components with RESTful APIs.",
+      "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
+      " React",
+      "Tailwind",
     ],
   },
 ];

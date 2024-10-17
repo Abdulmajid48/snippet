@@ -33,11 +33,12 @@ const Home = () => {
           transition={{ duration: 1 }}
           className="text-article font-normal w-auto sm:w-11/12 md:w-[65%] pr-3 leading-6 text-base"
         >
-          I&apos;m a software engineer with two years of experience,
-          specializing in web development with a strong background in Git,
-          Shell, React, Next.js, JavaScript, CI/CD, collaboration, HTML, and
-          CSS. Currently, I&apos;m focused on building accessible,
-          management-centered products at Flincap.
+          I am a software engineer with two years of experience, specializing in
+          web development. My expertise includes Git, React, Next.js, Typescript
+          JavaScript, HTML, and CSS, alongside a strong focus on collaboration
+          and team-driven development. Currently, I am currently focused on building
+          accessible, management-focused projects, prioritizing usability and
+          functionality in every solution I create.
         </motion.p>
       </div>
     </section>

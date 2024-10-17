@@ -7,7 +7,8 @@ interface Navlinks {
   number: string;
   link: string;
 }
-
+ export const resume =
+   "https://drive.google.com/file/d/1-COEwJtG796gNmroKQcO1RpqudMt6r5D/view";
 const Navbar: FC = () => {
   const [matches, setMatches] = useState(
     window.matchMedia("(max-width: 760px)").matches

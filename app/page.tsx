@@ -5,6 +5,7 @@ import Built from "@/components/Built";
 import Contactme from "@/components/Contactme";
 import Home from "@/components/Home";
 import Navbar from "@/components/Navbar";
+import Otherprojects from "@/components/Otherprojects";
 import Worked from "@/components/Worked";
 import { motion } from "framer-motion";
 import { createContext, Dispatch, SetStateAction, useState } from "react";
@@ -48,6 +49,7 @@ const Page = () => {
           <Aboutme />
           <Worked />
           <Built/>
+          <Otherprojects/>
           <Contactme/>
         </motion.main>
       </div>

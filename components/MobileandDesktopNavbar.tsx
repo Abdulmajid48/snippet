@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Navlinks, navLinks } from "./Navbar";
+import { Navlinks, navLinks, resume } from "./Navbar";
 import { AlignJustify, X, Zap } from "lucide-react";
 import { useContext, type FC } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -72,7 +72,7 @@ const Sidebar: FC<UserContextType> = ({ toggle, setToggle }) => {
                   );
                 })}
                 {/* Resume button */}
-                <Link href="">
+                <Link href={resume}>
                   <div>
                     <button className="border-lightgreen text-lightgreen border rounded-md h-9 w-[5.5rem]">
                       Resume
@@ -111,7 +111,7 @@ const DesktopNavbar = () => {
             );
           })}
           {/* Resume button */}
-          <Link href="">
+          <Link href={resume}>
             <div>
               <button className="border-lightgreen text-lightgreen border rounded-md h-9 w-[5.5rem]">
                 Resume

@@ -43,67 +43,29 @@ const Built = () => {
         /* Mobile view */
         <div className="flex flex-col gap-5">
           {Projects.map((item, index) => {
-            const {
-              feature,
-              projectname,
-              description,
-              tools,
-              github,
-              live,
-              image,
-            } = item;
-            return (
-              <Mobileview
-                key={index}
-                feature={feature}
-                projectname={projectname}
-                description={description}
-                tools={tools}
-                github={github}
-                live={live}
-                image={image}
-              />
-            );
+            return <Mobileview key={index} {...item} />;
           })}
         </div>
       ) : (
         /* Desktop view */
-        <div className="flex flex-col gap-4 justify-center items-start">
+        <div className="flex flex-col gap-9 justify-center items-start">
           {Projects.map((item, index) => {
-            const {
-              feature,
-              projectname,
-              description,
-              tools,
-              github,
-              live,
-              image,
-            } = item;
             return (
               <div
                 key={index}
-                className={`flex relative w-4/5 ${
+                className={`flex items-center relative w-11/12 h-96 m-auto ${
                   index % 2 == 0 ? "flex-row" : "flex-row-reverse"
                 }`}
               >
                 {/* Images container */}
-                <Figurecontainer image={image} index={index} />
+                <Figurecontainer image={item.image} index={index} />
                 <div
                   className={`${
                     index % 2 == 0 ? "absolute right-0" : "absolute left-0"
-                  }  z-20 w-2/3 rounded-sm`}
+                  }  z-20 w-3/4 rounded-sm`}
                 >
                   {/* Projects container */}
-                  <Project
-                    key={index}
-                    index={index}
-                    feature={feature}
-                    projectname={projectname}
-                    description={description}
-                    tools={tools}
-                    github={github}
-                    live={live}
-                  />
+                  <Project key={index} index={index} {...item} />
                 </div>
               </div>
             );
@@ -134,11 +96,19 @@ const Figurecontainer: FC<Pick<Projectprops, "image" | "index">> = ({
         <div
           className={` ${
             safeIndex % 2 == 0 ? "absolute left-0" : "absolute right-0"
-          } bg-[#10273aea] hover:bg-transparent h-[445px] w-[450px] bg-opacity-5 z-10`}
+          } bg-[#10273aea] hover:bg-transparent h-[310px] w-[500px] bg-opacity-5 z-10`}
         ></div>
         {/* Image */}
         <div>
-          {image && <Image src={image} alt="" height={10} width={450} />}
+          {image && (
+            <Image
+              src={image}
+              alt=""
+              height={384}
+              width={500}
+              objectFit="contain"
+            />
+          )}
         </div>
       </motion.figure>
     </>
@@ -162,19 +132,19 @@ const Project: FC<Projectprops> = (props) => {
       <p className="text-lightgreen font-ubuntu-mono">{feature}</p>
       <p className="text-name text-xl">{projectname}</p>
       <div
-        className={`bg-[#112240] h-auto w-5/6 px-4 py-3 text-article text-sm rounded-lg  ${
+        className={`bg-[#112240] h-auto w-5/6 px-4 py-4 text-article rounded-lg leading-relaxed  ${
           safeIndex ? "text-left" : "text-right"
         }`}
       >
         {description}
       </div>
-      <ul className="flex flex-row gap-4 text-name">
+      <ul className="flex flex-row gap-3 text-name">
         {tools.map((tool, index) => (
           <li key={index}>{tool}</li>
         ))}
       </ul>
       {/* Links for github and liveserver */}
-      <div className="flex flex-row gap-1">
+      <div className="flex flex-row gap-2">
         <Link href={github}>
           <Github color="#fff" />
         </Link>
@@ -187,10 +157,10 @@ const Project: FC<Projectprops> = (props) => {
   );
 };
 
+// MOBILE VERSION
 const Mobileview: FC<Projectprops> = (props) => {
   const { feature, projectname, description, tools, github, live, image } =
     props;
-
   return (
     <motion.div
       initial={{ opacity: 0, y: "100px" }}
@@ -215,9 +185,8 @@ const Mobileview: FC<Projectprops> = (props) => {
           zIndex: 0,
         }}
       />
-
       {/* Content layer */}
-      <div className="relative z-10 h-auto w-full flex flex-col gap-4 justify-center items-start px-5 py-3">
+      <div className="relative z-10 h-auto w-full flex flex-col gap-3 justify-center items-start px-5 pl-6 py-3">
         <p className="text-lightgreen font-ubuntu-mono">{feature}</p>
         <p className="text-name font-bold text-xl">{projectname}</p>
         <div className="text-article">{description}</div>
@@ -243,33 +212,40 @@ const Mobileview: FC<Projectprops> = (props) => {
 const Projects: Projectprops[] = [
   {
     feature: "Featured Project",
-    projectname: "Onlyfiat",
-    image: "/cryptland.png",
+    projectname: "Agromart",
+    image: "/agromart.png",
     description:
-      "Onlyfiat is a user-friendly crypto and giftcard trading platform that provides a safe and secure way to buy, sell, and trade digital assets. We are committed to providing our customers with the best possible experience, and we offer a wide range of features to make trading easy and convenient such as Instant deposits and withdrawals, Low fees, Secure trading, Wide range of assets and 24/7 customer support. Onlyfiat enables you to have a seamless trading experience.",
-    tools: ["React", "Node", "Supabase", "Vite", "Tailwind", "Typescript"],
-    github: "",
-    live: "",
+      "Our platform connects farmers and consumers for fresh, sustainable produce.",
+    tools: ["React", "Node", "Postgresql", "Tailwind"],
+    github: "https://github.com/Abdulmajid48/Agromart",
+    live: "https://agromart-roan.vercel.app/",
   },
   {
     feature: "Featured Project",
-    projectname: "Onlyfiat",
-    image: "/cryptland.png",
-    description:
-      "Onlyfiat is a user-friendly crypto and giftcard trading platform that provides a safe and secure way to buy, sell, and trade digital assets. We are committed to providing our customers with the best possible experience, and we offer a wide range of features to make trading easy and convenient such as Instant deposits and withdrawals, Low fees, Secure trading, Wide range of assets and 24/7 customer support. Onlyfiat enables you to have a seamless trading experience.",
-    tools: ["React", "Node", "Supabase", "Vite", "Tailwind", "Typescript"],
-    github: "",
-    live: "",
+    projectname: "Vesto",
+    image: "/vestoweb.png",
+    description: "All of your company financial accounts in one view",
+    tools: ["Nextjs", "Tailwind", "Typescript"],
+    github: "https://github.com/Abdulmajid48/cryptland",
+    live: "https://cryptland.vercel.app/",
   },
   {
     feature: "Featured Project",
-    projectname: "Onlyfiat",
-    image: "/cryptland.png",
-    description:
-      "Onlyfiat is a user-friendly crypto and giftcard trading platform that provides a safe and secure way to buy, sell, and trade digital assets. We are committed to providing our customers with the best possible experience, and we offer a wide range of features to make trading easy and convenient such as Instant deposits and withdrawals, Low fees, Secure trading, Wide range of assets and 24/7 customer support. Onlyfiat enables you to have a seamless trading experience.",
-    tools: ["React", "Node", "Supabase", "Vite", "Tailwind", "Typescript"],
-    github: "",
-    live: "",
+    projectname: "Stract",
+    image: "/stract.png",
+    description: "A Data Analysis Software For Your Business",
+    tools: ["React", "Vite", "Tailwind"],
+    github: "https://github.com/Abdulmajid48/stract",
+    live: "https://stract.vercel.app/",
+  },
+  {
+    feature: "Featured Project",
+    projectname: "Cryptland",
+    image: "/cryptlands.png",
+    description: "The Finance Solutions For Your Business",
+    tools: ["React", "Vite", "Tailwind"],
+    github: "https://github.com/Abdulmajid48/cryptland",
+    live: "https://cryptland.vercel.app/",
   },
 ];
 export default Built;
