@@ -37,7 +37,7 @@ const Built = () => {
   return (
     <section
       id="work"
-      className="sm:w-5/6 m-auto mb-60 mt-40 relative overflow-hidden"
+      className="sm:w-5/6 m-auto mb-20 mt-40 relative overflow-hidden"
     >
       {/* Topic title */}
       <div className="mb-5 flex justify-center min-[760px]:justify-start items-center">

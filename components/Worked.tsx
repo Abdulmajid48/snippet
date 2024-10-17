@@ -91,7 +91,7 @@ const Workplacename: FC<{
                 whileHover={{ scale: 0.9 }}
               ></motion.div>
             )}
-            <div className="w-auto sm:w-20 h-10 rounded-[0.2rem] hover:bg-lightgreen hover:bg-opacity-15 sm:bg-opacity-25 flex flex-row justify-center items-center sm:justify-start sm:pl-3 font-ubuntu-mono">
+            <div className="w-auto sm:w-20 h-10 rounded-[0.2rem] hover:bg-lightgreen hover:bg-opacity-15 sm:bg-opacity-25 flex flex-row justify-center items-center gap-3 sm:gap-0 sm:justify-start sm:pl-3 font-ubuntu-mono">
               {name}
             </div>
           </div>

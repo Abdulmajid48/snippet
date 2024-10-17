@@ -41,7 +41,7 @@ const Aboutme = () => {
               frontend development.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
-            <ul className="font-ubuntu-mono grid grid-cols-2 gap-x-8 w-1/2 md:w-4/5 m-auto list-greek list-inside">
+            <ul className="font-ubuntu-mono grid grid-cols-2 gap-x-2 w-11/12 md:w-4/5 m-auto list-greek list-inside">
               <li>JavaScript (ES+6)</li>
               <li>React </li>
               <li> Next JS </li>
