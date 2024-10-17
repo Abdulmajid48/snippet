@@ -234,8 +234,8 @@ const Projects: Projectprops[] = [
     image: "/vestoweb.png",
     description: "All of your company financial accounts in one view",
     tools: ["Nextjs", "Tailwind", "Typescript"],
-    github: "https://github.com/Abdulmajid48/cryptland",
-    live: "https://cryptland.vercel.app/",
+    github: "https://github.com/Abdulmajid48/vestoweb",
+    live: "https://vestoweb.vercel.app/",
   },
   {
     feature: "Featured Project",
