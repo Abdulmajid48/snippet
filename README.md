@@ -1,6 +1,6 @@
 # Hi there, I'm a Software Engineer 👋
 
- am a software engineer with two years of experience, specializing in web development. My expertise includes Git, React, Next.js, Typescript JavaScript, HTML, and CSS, alongside a strong focus on collaboration and team-driven development. This is the second iteration of my website built with [Next](https://nextjs.org/) and hosted with [Vercel](https://vercel.com/).
+ I am a software engineer with two years of experience, specializing in web development. My expertise includes Git, React, Next.js, Typescript JavaScript, HTML, and CSS, alongside a strong focus on collaboration and team-driven development. This is the second iteration of my website built with [Next](https://nextjs.org/) and hosted with [Vercel](https://vercel.com/).
 
 ## Skills and Expertise
 
