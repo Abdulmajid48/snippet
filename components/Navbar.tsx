@@ -7,8 +7,12 @@ interface Navlinks {
   number: string;
   link: string;
 }
+
+// Resume Google Drive link
 export const resume =
-  "https://drive.google.com/file/d/1-COEwJtG796gNmroKQcO1RpqudMt6r5D/view";
+  "https://drive.google.com/file/d/1-mrd4KY__YS2JLQBGyXua5HweTYOBXd-/view?usp=drivesdk";
+
+// Navbar component
 const Navbar: FC = () => {
   const [matches, setMatches] = useState(false);
 
