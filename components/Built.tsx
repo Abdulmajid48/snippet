@@ -220,6 +220,16 @@ const Mobileview: FC<Projectprops> = (props) => {
 const Projects: Projectprops[] = [
   {
     feature: "Featured Project",
+    projectname: "Lumina",
+    image: "/lumina.png",
+    description:
+      ".",
+    tools: ["Nextjs","Framer Motion", "Tailwind"],
+    github: "https://github.com/Abdulmajid48/lumina",
+    live: "https://lumina-gilt.vercel.app/",
+  },
+  {
+    feature: "Featured Project",
     projectname: "Agromart",
     image: "/agromart.png",
     description:
