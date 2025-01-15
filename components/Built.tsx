@@ -223,7 +223,7 @@ const Projects: Projectprops[] = [
     projectname: "Lumina",
     image: "/lumina.png",
     description:
-      ".",
+      "Experience a rise in your pursuits with our expert consulting. We excel in tailoring success strategies to your unique goals, covering diverse fields for maximum impact, professionally and delightfully.",
     tools: ["Nextjs","Framer Motion", "Tailwind"],
     github: "https://github.com/Abdulmajid48/lumina",
     live: "https://lumina-gilt.vercel.app/",
