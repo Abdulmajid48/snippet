@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Ubuntu_Mono } from "next/font/google";
 import { Roboto } from "next/font/google";
+import { ReactNode } from "react";
 
 const ubuntuMono = Ubuntu_Mono({
   weight: ['400', '700'],
@@ -15,16 +16,6 @@ const roboto = Roboto({
   weight: ['400', '500', '700'],  // Specify the weights you want
   variable: '--font-roboto', // Optional: Define as a CSS variable
 });
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 
 export const metadata: Metadata = {
   title: "Abdulmajid's Portfolio",
@@ -36,9 +27,9 @@ export default function RootLayout({
   children,
   leftverticalline,
 }: Readonly<{
-  children: React.ReactNode;
-  contacticons: React.ReactNode;
-  leftverticalline: React.ReactNode;
+  children: ReactNode;
+  contacticons:ReactNode;
+  leftverticalline: ReactNode;
 }>) {
   
   return (

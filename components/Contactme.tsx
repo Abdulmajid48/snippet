@@ -12,6 +12,25 @@ interface LinkItem {
   linkIcon: ReactNode;
   href: string;
 }
+
+export const linkList: LinkItem[] = [
+  {
+    linkIcon: <GitHubIcon />,
+    href: "https://github.com/Abdulmajid48",
+  },
+  {
+    linkIcon: <LinkedInIcon />,
+    href: "https://www.linkedin.com/in/abdul-majid-aladejana/",
+  },
+  {
+    linkIcon: <XIcon />,
+    href: "https://x.com/aladejanaamajid",
+  },
+  {
+    linkIcon: <InstagramIcon />,
+    href: "",
+  },
+];
 const Contactme = () => {
   return (
     <footer id="contact" className="relative">
@@ -57,22 +76,5 @@ const Contactme = () => {
   );
 };
 
-export const linkList: LinkItem[] = [
-  {
-    linkIcon: <GitHubIcon />,
-    href: "https://github.com/Abdulmajid48",
-  },
-  {
-    linkIcon: <LinkedInIcon />,
-    href: "https://www.linkedin.com/in/abdul-majid-aladejana/",
-  },
-  {
-    linkIcon: <XIcon />,
-    href: "https://x.com/aladejanaamajid",
-  },
-  {
-    linkIcon: <InstagramIcon />,
-    href: "",
-  },
-];
+
 export default Contactme;

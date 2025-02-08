@@ -9,6 +9,51 @@ interface Workgridtype {
   duration: string;
   functions: string[];
 }
+const Workplace: Workgridtype[] = [
+  {
+    name: "Agromart",
+    jobtype: "Fullstack developer",
+    duration: "",
+    functions: [
+      "I developed a fullstack app and Leveraged Material UI, Shadcn UI and other visually appealing UI components using",
+      "React",
+      "Tailwind",
+      "Nodejs",
+      "Postgresql",
+    ],
+  },
+  {
+    name: "Vesto",
+    jobtype: "Frontend Developer",
+    duration: "",
+    functions: [
+      "I deveoped financial account app and Leveraged Material UI, and other visually appealing UI using",
+      " Nextjs",
+      "Tailwind",
+      "Typescript",
+    ],
+  },
+  {
+    name: "Cryptland",
+    jobtype: "Frontend Developer",
+    duration: "",
+    functions: [
+      "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
+      "React",
+      "Tailwind",
+    ],
+  },
+  {
+    name: "Stract",
+    jobtype: "Frontend Developer",
+    duration: "",
+    functions: [
+      "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
+      " React",
+      "Tailwind",
+    ],
+  },
+];
 
 const Worked = () => {
   const context = useContext(UserContext);
@@ -130,50 +175,6 @@ const Workdetails: FC<{ selectedWorkplace: Workgridtype | null }> = ({
     </div>
   );
 };
-const Workplace: Workgridtype[] = [
-  {
-    name: "Agromart",
-    jobtype: "Fullstack developer",
-    duration: "",
-    functions: [
-      "I developed a fullstack app and Leveraged Material UI, Shadcn UI and other visually appealing UI components using",
-      "React",
-      "Tailwind",
-      "Nodejs",
-      "Postgresql",
-    ],
-  },
-  {
-    name: "Vesto",
-    jobtype: "Frontend Developer",
-    duration: "",
-    functions: [
-      "I deveoped financial account app and Leveraged Material UI, and other visually appealing UI using",
-      " Nextjs",
-      "Tailwind",
-      "Typescript",
-    ],
-  },
-  {
-    name: "Cryptland",
-    jobtype: "Frontend Developer",
-    duration: "",
-    functions: [
-      "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
-      "React",
-      "Tailwind",
-    ],
-  },
-  {
-    name: "Stract",
-    jobtype: "Frontend Developer",
-    duration: "",
-    functions: [
-      "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
-      " React",
-      "Tailwind",
-    ],
-  },
-];
+
 export { Workgrid };
 export default Worked;

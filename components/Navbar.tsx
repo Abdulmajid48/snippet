@@ -7,6 +7,28 @@ interface Navlinks {
   number: string;
   link: string;
 }
+const navLinks: Navlinks[] = [
+  {
+    number: "01.",
+    name: "About",
+    link: "#about",
+  },
+  {
+    number: "02.",
+    name: "Experience",
+    link: "#experience",
+  },
+  {
+    number: "03.",
+    name: "Work",
+    link: "#work",
+  },
+  {
+    number: "04.",
+    name: "Contact",
+    link: "#contact",
+  },
+];
 
 // Resume Google Drive link
 export const resume =
@@ -39,28 +61,7 @@ const Navbar: FC = () => {
   );
 };
 
-const navLinks: Navlinks[] = [
-  {
-    number: "01.",
-    name: "About",
-    link: "#about",
-  },
-  {
-    number: "02.",
-    name: "Experience",
-    link: "#experience",
-  },
-  {
-    number: "03.",
-    name: "Work",
-    link: "#work",
-  },
-  {
-    number: "04.",
-    name: "Contact",
-    link: "#contact",
-  },
-];
+
 export default Navbar;
 export { navLinks };
 export type { Navlinks };

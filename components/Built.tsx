@@ -16,6 +16,57 @@ interface Projectprops {
   index?: number;
 }
 
+// list of the projects ive worked on
+const Projects: Projectprops[] = [
+  {
+    feature: "Featured Project",
+    projectname: "Lumina",
+    image: "/lumina.png",
+    description:
+      "Experience a rise in your pursuits with our expert consulting. We excel in tailoring success strategies to your unique goals, covering diverse fields for maximum impact, professionally and delightfully.",
+    tools: ["Nextjs", "Framer Motion", "Tailwind"],
+    github: "https://github.com/Abdulmajid48/lumina",
+    live: "https://lumina-gilt.vercel.app/",
+  },
+  {
+    feature: "Featured Project",
+    projectname: "Agromart",
+    image: "/agromart.png",
+    description:
+      "Our platform connects farmers and consumers for fresh, sustainable produce.",
+    tools: ["React", "Node", "Postgresql", "Tailwind"],
+    github: "https://github.com/Abdulmajid48/Agromart",
+    live: "https://agromart-roan.vercel.app/",
+  },
+  {
+    feature: "Featured Project",
+    projectname: "Vesto",
+    image: "/vestoweb.png",
+    description: "All of your company financial accounts in one view",
+    tools: ["Nextjs", "Tailwind", "Typescript"],
+    github: "https://github.com/Abdulmajid48/vestoweb",
+    live: "https://vestoweb.vercel.app/",
+  },
+  {
+    feature: "Featured Project",
+    projectname: "Stract",
+    image: "/stract.png",
+    description: "A Data Analysis Software For Your Business",
+    tools: ["React", "Vite", "Tailwind"],
+    github: "https://github.com/Abdulmajid48/stract",
+    live: "https://stract.vercel.app/",
+  },
+  {
+    feature: "Featured Project",
+    projectname: "Cryptland",
+    image: "/cryptlands.png",
+    description: "The Finance Solutions For Your Business",
+    tools: ["React", "Vite", "Tailwind"],
+    github: "https://github.com/Abdulmajid48/cryptland",
+    live: "https://cryptland.vercel.app/",
+  },
+];
+
 const Built = () => {
   const [matches, setMatches] = useState(false);
 
@@ -61,16 +112,14 @@ const Built = () => {
             return (
               <div
                 key={index}
-                className={`flex items-center relative w-11/12 h-96 m-auto ${
-                  index % 2 == 0 ? "flex-row" : "flex-row-reverse"
-                }`}
+                className={`flex items-center relative w-11/12 h-96 m-auto ${index % 2 == 0 ? "flex-row" : "flex-row-reverse"
+                  }`}
               >
                 {/* Images container */}
                 <Figurecontainer image={item.image} index={index} />
                 <div
-                  className={`${
-                    index % 2 == 0 ? "absolute right-0" : "absolute left-0"
-                  }  z-20 w-3/4 rounded-sm`}
+                  className={`${index % 2 == 0 ? "absolute right-0" : "absolute left-0"
+                    }  z-20 w-3/4 rounded-sm`}
                 >
                   {/* Projects container */}
                   <Project key={index} index={index} {...item} />
@@ -102,9 +151,8 @@ const Figurecontainer: FC<Pick<Projectprops, "image" | "index">> = ({
       >
         {/* background color */}
         <div
-          className={` ${
-            safeIndex % 2 == 0 ? "absolute left-0" : "absolute right-0"
-          } bg-[#10273aea] hover:bg-transparent h-[310px] w-[500px] bg-opacity-5 z-10`}
+          className={` ${safeIndex % 2 == 0 ? "absolute left-0" : "absolute right-0"
+            } bg-[#10273aea] hover:bg-transparent h-[310px] w-[500px] bg-opacity-5 z-10`}
         ></div>
         {/* Image */}
         <div>
@@ -133,16 +181,14 @@ const Project: FC<Projectprops> = (props) => {
       initial={{ opacity: 0, y: "100px" }}
       whileInView={{ opacity: 1, y: "0px" }}
       transition={{ ease: "easeInOut", duration: 1 }}
-      className={`flex flex-col gap-4 py-4  ${
-        safeIndex % 2 == 0 ? "items-end pr-4" : "items-start pl-4"
-      }`}
+      className={`flex flex-col gap-4 py-4  ${safeIndex % 2 == 0 ? "items-end pr-4" : "items-start pl-4"
+        }`}
     >
       <p className="text-lightgreen font-ubuntu-mono">{feature}</p>
       <p className="text-name text-xl">{projectname}</p>
       <div
-        className={`bg-[#112240] h-auto w-5/6 px-4 py-4 text-article rounded-lg leading-relaxed  ${
-          safeIndex ? "text-left" : "text-right"
-        }`}
+        className={`bg-[#112240] h-auto w-5/6 px-4 py-4 text-article rounded-lg leading-relaxed  ${safeIndex ? "text-left" : "text-right"
+          }`}
       >
         {description}
       </div>
@@ -216,54 +262,5 @@ const Mobileview: FC<Projectprops> = (props) => {
   );
 };
 
-// list of the projects ive worked on
-const Projects: Projectprops[] = [
-  {
-    feature: "Featured Project",
-    projectname: "Lumina",
-    image: "/lumina.png",
-    description:
-      "Experience a rise in your pursuits with our expert consulting. We excel in tailoring success strategies to your unique goals, covering diverse fields for maximum impact, professionally and delightfully.",
-    tools: ["Nextjs","Framer Motion", "Tailwind"],
-    github: "https://github.com/Abdulmajid48/lumina",
-    live: "https://lumina-gilt.vercel.app/",
-  },
-  {
-    feature: "Featured Project",
-    projectname: "Agromart",
-    image: "/agromart.png",
-    description:
-      "Our platform connects farmers and consumers for fresh, sustainable produce.",
-    tools: ["React", "Node", "Postgresql", "Tailwind"],
-    github: "https://github.com/Abdulmajid48/Agromart",
-    live: "https://agromart-roan.vercel.app/",
-  },
-  {
-    feature: "Featured Project",
-    projectname: "Vesto",
-    image: "/vestoweb.png",
-    description: "All of your company financial accounts in one view",
-    tools: ["Nextjs", "Tailwind", "Typescript"],
-    github: "https://github.com/Abdulmajid48/vestoweb",
-    live: "https://vestoweb.vercel.app/",
-  },
-  {
-    feature: "Featured Project",
-    projectname: "Stract",
-    image: "/stract.png",
-    description: "A Data Analysis Software For Your Business",
-    tools: ["React", "Vite", "Tailwind"],
-    github: "https://github.com/Abdulmajid48/stract",
-    live: "https://stract.vercel.app/",
-  },
-  {
-    feature: "Featured Project",
-    projectname: "Cryptland",
-    image: "/cryptlands.png",
-    description: "The Finance Solutions For Your Business",
-    tools: ["React", "Vite", "Tailwind"],
-    github: "https://github.com/Abdulmajid48/cryptland",
-    live: "https://cryptland.vercel.app/",
-  },
-];
+
 export default Built;

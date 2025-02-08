@@ -10,6 +10,25 @@ interface ProjectProps {
   description: string;
   tools: string[]; // tools is an array of strings
 }
+
+const Projectscontent: ProjectProps[] = [
+  {
+    folder: "https://tripace.vercel.app/",
+    link: "https://github.com/Abdulmajid48/tripace",
+    name: "Tripace",
+    description:
+      "A 17 pages Flight booking platform with taxi services and hotel accommodations.",
+    tools: ["React", "Bootstrap"],
+  },
+  {
+    folder: "https://abdulmajid.vercel.app/",
+    link: "https://github.com/Abdulmajid48/abdulmajid",
+    name: "First Portfolio",
+    description:
+      "my first Portfolio Website Showcasing projects with images or videos, brief descriptions, and links",
+    tools: ["React", "Tailwind"],
+  },
+];
 const Otherprojects = () => {
   return (
     <div className="flex flex-col justify-center gap-3 items-center mb-20 w-11/12 sm:w-4/5 m-auto">
@@ -67,22 +86,5 @@ const Project: FC<ProjectProps> = (props) => {
   );
 };
 
-const Projectscontent: ProjectProps[] = [
-  {
-    folder: "https://tripace.vercel.app/",
-    link: "https://github.com/Abdulmajid48/tripace",
-    name: "Tripace",
-    description:
-      "A 17 pages Flight booking platform with taxi services and hotel accommodations.",
-    tools: ["React", "Bootstrap"],
-  },
-  {
-    folder: "https://abdulmajid.vercel.app/",
-    link: "https://github.com/Abdulmajid48/abdulmajid",
-    name: "First Portfolio",
-    description:
-      "my first Portfolio Website Showcasing projects with images or videos, brief descriptions, and links",
-    tools: ["React", "Tailwind"],
-  },
-];
+
 export default Otherprojects;
