@@ -11,6 +11,21 @@ interface Workgridtype {
 }
 const Workplace: Workgridtype[] = [
   {
+    name: "Arriaayah",
+    jobtype: "Lead developer, Backend developer",
+    duration: "2025 - Present",
+    functions: [
+      "Led a cross-functional team through the entire development lifecycle of a web application",
+      "Served as the sole backend developer, responsible for backend architecture and implementation",
+      "Built scalable backend services using NestJS and TypeScript",
+      "Designed and implemented RESTful APIs for seamless communication between frontend and backend",
+      "Integrated PostgreSQL using Prisma ORM for database management",
+      "Handled authentication, authorization, and data storage via Supabase",
+      "Implemented RedisStore for efficient caching and improved performance",
+      "Oversaw project planning and task delegation",
+    ],
+  },
+  {
     name: "Agromart",
     jobtype: "Fullstack developer",
     duration: "",

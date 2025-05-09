@@ -20,6 +20,24 @@ interface Projectprops {
 const Projects: Projectprops[] = [
   {
     feature: "Featured Project",
+    projectname: "Arriaayah",
+    image: "/arriaayah.png",
+    description:
+      "A flexible online learning platform that helps them build strong islamic knowledge without pressure or overwhelm.",
+    tools: [
+      "Nextjs",
+      "Framer Motion",
+      "Tailwind",
+      "Typescript",
+      "Nestjs",
+      "Prisma",
+      "Supabase",
+    ],
+    github: "",
+    live: "https://www.arriaayah.com/",
+  },
+  {
+    feature: "Featured Project",
     projectname: "Lumina",
     image: "/lumina.png",
     description:
@@ -112,14 +130,16 @@ const Built = () => {
             return (
               <div
                 key={index}
-                className={`flex items-center relative w-11/12 h-96 m-auto ${index % 2 == 0 ? "flex-row" : "flex-row-reverse"
-                  }`}
+                className={`flex items-center relative w-11/12 h-96 m-auto ${
+                  index % 2 == 0 ? "flex-row" : "flex-row-reverse"
+                }`}
               >
                 {/* Images container */}
                 <Figurecontainer image={item.image} index={index} />
                 <div
-                  className={`${index % 2 == 0 ? "absolute right-0" : "absolute left-0"
-                    }  z-20 w-3/4 rounded-sm`}
+                  className={`${
+                    index % 2 == 0 ? "absolute right-0" : "absolute left-0"
+                  }  z-20 w-3/4 rounded-sm`}
                 >
                   {/* Projects container */}
                   <Project key={index} index={index} {...item} />
@@ -151,8 +171,9 @@ const Figurecontainer: FC<Pick<Projectprops, "image" | "index">> = ({
       >
         {/* background color */}
         <div
-          className={` ${safeIndex % 2 == 0 ? "absolute left-0" : "absolute right-0"
-            } bg-[#10273aea] hover:bg-transparent h-[310px] w-[500px] bg-opacity-5 z-10`}
+          className={` ${
+            safeIndex % 2 == 0 ? "absolute left-0" : "absolute right-0"
+          } bg-[#10273aea] hover:bg-transparent h-[310px] w-[500px] bg-opacity-5 z-10`}
         ></div>
         {/* Image */}
         <div>
@@ -181,14 +202,16 @@ const Project: FC<Projectprops> = (props) => {
       initial={{ opacity: 0, y: "100px" }}
       whileInView={{ opacity: 1, y: "0px" }}
       transition={{ ease: "easeInOut", duration: 1 }}
-      className={`flex flex-col gap-4 py-4  ${safeIndex % 2 == 0 ? "items-end pr-4" : "items-start pl-4"
-        }`}
+      className={`flex flex-col gap-4 py-4  ${
+        safeIndex % 2 == 0 ? "items-end pr-4" : "items-start pl-4"
+      }`}
     >
       <p className="text-lightgreen font-ubuntu-mono">{feature}</p>
       <p className="text-name text-xl">{projectname}</p>
       <div
-        className={`bg-[#112240] h-auto w-5/6 px-4 py-4 text-article rounded-lg leading-relaxed  ${safeIndex ? "text-left" : "text-right"
-          }`}
+        className={`bg-[#112240] h-auto w-5/6 px-4 py-4 text-article rounded-lg leading-relaxed  ${
+          safeIndex ? "text-left" : "text-right"
+        }`}
       >
         {description}
       </div>
@@ -261,6 +284,5 @@ const Mobileview: FC<Projectprops> = (props) => {
     </motion.div>
   );
 };
-
 
 export default Built;
