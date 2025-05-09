@@ -58,16 +58,16 @@ const Workplace: Workgridtype[] = [
       "Tailwind",
     ],
   },
-  {
-    name: "Stract",
-    jobtype: "Frontend Developer",
-    duration: "",
-    functions: [
-      "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
-      " React",
-      "Tailwind",
-    ],
-  },
+  // {
+  //   name: "Stract",
+  //   jobtype: "Frontend Developer",
+  //   duration: "",
+  //   functions: [
+  //     "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
+  //     " React",
+  //     "Tailwind",
+  //   ],
+  // },
 ];
 
 const Worked = () => {
