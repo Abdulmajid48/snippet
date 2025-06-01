@@ -32,7 +32,7 @@ const navLinks: Navlinks[] = [
 
 // Resume Google Drive link
 export const resume =
-  "https://drive.google.com/file/d/1-mrd4KY__YS2JLQBGyXua5HweTYOBXd-/view?usp=drivesdk";
+  "https://docs.google.com/document/d/1NMn3nNlVe0Yt3-80pDty-QbLv_-PBWMYS1PzB697ATs/edit?usp=sharing";
 
 // Navbar component
 const Navbar: FC = () => {
