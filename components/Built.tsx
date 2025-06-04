@@ -184,6 +184,7 @@ const Figurecontainer: FC<Pick<Projectprops, "image" | "index">> = ({
               height={384}
               width={500}
               objectFit="contain"
+               style={{ minHeight: 310 }}
             />
           )}
         </div>
