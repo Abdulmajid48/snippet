@@ -11,6 +11,24 @@ interface Workgridtype {
 }
 const Workplace: Workgridtype[] = [
   {
+    name: "PhysioConnect",
+    jobtype: "Fullstack Developer (Sole Developer)",
+    duration: "2025 - Present",
+    functions: [
+      "Developed the entire PhysioConnect platform as the sole fullstack developer",
+      "Architected and implemented backend services using NestJS, Prisma ORM, and PostgreSQL",
+
+      "Implemented secure payment systems using Stripe SDKs",
+      "Implemented secure authentication and role-based authorization using Passport and JWT",
+      "Built real-time features with WebSockets and Socket.IO for interactive sessions",
+      "Developed video/audio processing features with FFmpeg, ffprobe, and AWS S3 storage",
+      "Designed modern and responsive UI using Next.js, React, Tailwind, Material UI, Lucide React, Shadcn UI, and Framer Motion",
+      "Managed state efficiently with Zustand and optimized client-server communication using Axios",
+      "Implemented caching and scheduling with Redis and NestJS Schedule for performance improvements",
+      "Integrated email, notifications, and file uploads with Nodemailer, Multer, and AWS SDK",
+    ],
+  },
+  {
     name: "Arriaayah",
     jobtype: "Lead developer, Backend developer",
     duration: "2025 - Present",
@@ -48,16 +66,16 @@ const Workplace: Workgridtype[] = [
       "Typescript",
     ],
   },
-  {
-    name: "Cryptland",
-    jobtype: "Frontend Developer",
-    duration: "",
-    functions: [
-      "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
-      "React",
-      "Tailwind",
-    ],
-  },
+  // {
+  //   name: "Cryptland",
+  //   jobtype: "Frontend Developer",
+  //   duration: "",
+  //   functions: [
+  //     "I deveoped financial account app and Leveraged Material UI and other visually appealing UI using",
+  //     "React",
+  //     "Tailwind",
+  //   ],
+  // },
   // {
   //   name: "Stract",
   //   jobtype: "Frontend Developer",
@@ -110,7 +128,7 @@ const Workgrid: FC = () => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row gap-2 mt-5 sm:mt-10 ">
+    <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 mt-5 sm:mt-10 ">
       <div className="w-auto">
         <Workplacename
           HandleSelect={HandleSelect}
@@ -151,7 +169,7 @@ const Workplacename: FC<{
                 whileHover={{ scale: 0.9 }}
               ></motion.div>
             )}
-            <div className="w-full sm:w-20 h-10 rounded-[0.2rem] hover:bg-lightgreen hover:bg-opacity-15 sm:bg-opacity-25 flex flex-row justify-center items-center gap-8 sm:gap-0 sm:justify-start sm:pl-3 font-ubuntu-mono">
+            <div className="w-full sm:w-64 h-10 rounded-[0.2rem] hover:bg-lightgreen hover:bg-opacity-15 sm:bg-opacity-25 flex flex-row justify-center items-center gap-8 sm:gap-0 sm:justify-start sm:pl-3 font-ubuntu-mono">
               {name}
             </div>
           </div>

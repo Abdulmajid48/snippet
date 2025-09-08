@@ -20,6 +20,29 @@ interface Projectprops {
 const Projects: Projectprops[] = [
   {
     feature: "Featured Project",
+    projectname: "PhysioConnect",
+    image: "/physioconnect.png", 
+    description:
+      "The premier community platform for Physiotherapists that integrates real-time video streaming, online courses, E-book marketplace forum chat, secure file storage, payment systems, and modern UI to connect, learn, and elevate their practice.",
+    tools: [
+      "Nextjs",
+      "Typescript",
+      "Tailwind",
+      "MUI",
+      "Shadcn UI",
+      "Framer Motion",
+      "Nestjs",
+      "Prisma",
+      "PostgreSQL",
+      "Stripe",
+      "Socket.IO",
+      "AWS S3",
+    ],
+    github: "", // if public repo exists, drop the link
+    live: "https://www.physioconnect.app/", // put the live URL if deployed
+  },
+  {
+    feature: "Featured Project",
     projectname: "Arriaayah",
     image: "/arriaayah.png",
     description:
