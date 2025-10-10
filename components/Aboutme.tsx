@@ -22,30 +22,23 @@ const Aboutme = () => {
             className="w-11/12 m-auto md:w-4/5 text-article grid grid-cols-1 gap-10 text-base font-roboto"
           >
             <p>
-              As a frontend developer, I specialize in creating dynamic,
-              user-friendly interfaces using React, TypeScript, and Next.js,
-              ensuring smooth and visually appealing user experiences
+              As a full-stack developer, I build scalable and efficient applications from end to end, working seamlessly across both frontend and backend. On the frontend, I specialize in React, TypeScript, and Next.js to create dynamic, user-friendly interfaces that deliver smooth and visually appealing user experiences.
             </p>
             <p>
-              Beyond frontend work, I have practical experience building
-              backends for both personal projects and production applications,
-              giving me a well-rounded development background.
+             I’m also proficient with UI frameworks such as Tailwind, Shadcn UI, Daisy UI, and Material UI, enabling me to design sleek, responsive, and functional web applications that connect smoothly with backend services.
             </p>
             <p>
-              I’m also proficient with frameworks like Tailwind, Shadcn UI,
-              Daisy UI and Material UI, which allow me to design sleek,
-              responsive, and functional web applications.
+              On the backend, I have practical experience developing APIs and server-side logic for both personal projects and production applications, using Node.js, Nest.js, PostgreSQL, Socket.IO, and modern frameworks to ensure performance and reliability.
             </p>
             <p>
-              While I consider myself a generalist, my main focus lie in
-              frontend development.
+             While I’m comfortable working across the stack, my focus is on building cohesive solutions where frontend and backend integrate seamlessly.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
             <ul className="font-ubuntu-mono grid grid-cols-2 gap-x-2 w-11/12 md:w-4/5 m-auto list-greek list-inside">
               <li>JavaScript (ES+6)</li>
               <li>React </li>
               <li> Next JS </li>
-              <li>Node JS</li>
+              <li>Nest JS</li>
               <li>Typescript</li>
               <li>Tailwind</li>
               <li>Postgresql</li>

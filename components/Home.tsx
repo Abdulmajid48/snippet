@@ -33,8 +33,8 @@ const Home = () => {
           transition={{ duration: 1 }}
           className="text-article font-normal w-auto sm:w-11/12 md:w-[65%] pr-3 leading-6 text-base"
         >
-          I am a software engineer with two years of experience, specializing in
-          web development. My expertise includes Git, React, Next.js, Typescript
+          I am a software engineer with over three years of experience, specializing in
+          web development. My expertise includes Git, React, Next.js, Nest.js, Typescript
           JavaScript, HTML, and CSS, alongside a strong focus on collaboration
           and team-driven development. Currently, I am currently focused on building
           accessible, management-focused projects, prioritizing usability and

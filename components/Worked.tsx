@@ -147,7 +147,7 @@ const Workplacename: FC<{
   selectedWorkplaceIndex: number | null;
 }> = ({ HandleSelect, selectedWorkplaceIndex }) => {
   return (
-    <div className="flex sm:flex-col flex-row gap-2 text-article">
+    <div className="sm:flex sm:flex-col grid grid-cols-4 grid-rows-1 sm:gap-3 text-article text-[12px]">
       {Workplace.map((item, workindex) => {
         const { name } = item;
         const isSelected = selectedWorkplaceIndex === workindex;
@@ -169,7 +169,7 @@ const Workplacename: FC<{
                 whileHover={{ scale: 0.9 }}
               ></motion.div>
             )}
-            <div className="w-full sm:w-64 h-10 rounded-[0.2rem] hover:bg-lightgreen hover:bg-opacity-15 sm:bg-opacity-25 flex flex-row justify-center items-center gap-8 sm:gap-0 sm:justify-start sm:pl-3 font-ubuntu-mono">
+            <div className="w-full sm:w-64 h-10 rounded-[0.2rem] hover:bg-lightgreen hover:bg-opacity-15 sm:bg-opacity-25 flex flex-row justify-center items-center gap-8 sm:gap-0 sm:justify-start sm:pl-3 font-ubuntu-mono text-[12px] sm:text-[16px]">
               {name}
             </div>
           </div>
