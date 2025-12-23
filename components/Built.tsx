@@ -21,7 +21,7 @@ const Projects: Projectprops[] = [
   {
     feature: "Featured Project",
     projectname: "PhysioConnect",
-    image: "/physioconnect.png", 
+    image: "/physioconnect.png",
     description:
       "The premier community platform for Physiotherapists that integrates real-time video streaming, online courses, E-book marketplace forum chat, secure file storage, payment systems, and modern UI to connect, learn, and elevate their practice.",
     tools: [
@@ -43,6 +43,26 @@ const Projects: Projectprops[] = [
   },
   {
     feature: "Featured Project",
+    projectname: "Waa Ranti",
+    image: "/dashboard.jpg",
+    description:
+      "An Electronic Health Reminder and Record System Software",
+    tools: [
+      "Nextjs",
+      "Typescript",
+      "Tailwind",
+      "MUI",
+      "Lucide React",
+      "Framer Motion",
+      "Nestjs",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    github: "", // if public repo exists, drop the link
+    live: "https://www.waarantiehrrs.com", // put the live URL if deployed
+  },
+  {
+    feature: "Featured Project",
     projectname: "Arriaayah",
     image: "/arriaayah.png",
     description:
@@ -57,7 +77,17 @@ const Projects: Projectprops[] = [
       "Supabase",
     ],
     github: "",
-    live: "https://www.arriaayah.com/",
+    live: "https://www.arriaayah.com",
+  },
+  {
+    feature: "Featured Project",
+    projectname: "DesignsByDaniel",
+    image: "/designsbydaniel.png",
+    description:
+      "A product and pitch deck designer Portfolio website",
+    tools: ["Nextjs", "Framer Motion", "Tailwind", "Lucide React"],
+    github: "",
+    live: "https://www.designsbydaniel.com",
   },
   {
     feature: "Featured Project",
@@ -153,16 +183,14 @@ const Built = () => {
             return (
               <div
                 key={index}
-                className={`flex items-center relative w-11/12 h-96 m-auto ${
-                  index % 2 == 0 ? "flex-row" : "flex-row-reverse"
-                }`}
+                className={`flex items-center relative w-11/12 h-96 m-auto ${index % 2 == 0 ? "flex-row" : "flex-row-reverse"
+                  }`}
               >
                 {/* Images container */}
                 <Figurecontainer image={item.image} index={index} />
                 <div
-                  className={`${
-                    index % 2 == 0 ? "absolute right-0" : "absolute left-0"
-                  }  z-20 w-3/4 rounded-sm`}
+                  className={`${index % 2 == 0 ? "absolute right-0" : "absolute left-0"
+                    }  z-20 w-3/4 rounded-sm`}
                 >
                   {/* Projects container */}
                   <Project key={index} index={index} {...item} />
@@ -194,9 +222,8 @@ const Figurecontainer: FC<Pick<Projectprops, "image" | "index">> = ({
       >
         {/* background color */}
         <div
-          className={` ${
-            safeIndex % 2 == 0 ? "absolute left-0" : "absolute right-0"
-          } bg-[#10273aea] hover:bg-transparent h-[310px] w-[500px] bg-opacity-5 z-10`}
+          className={` ${safeIndex % 2 == 0 ? "absolute left-0" : "absolute right-0"
+            } bg-[#10273aea] hover:bg-transparent h-[340px] w-[500px] bg-opacity-5 z-10`}
         ></div>
         {/* Image */}
         <div>
@@ -207,7 +234,7 @@ const Figurecontainer: FC<Pick<Projectprops, "image" | "index">> = ({
               height={384}
               width={500}
               objectFit="contain"
-               style={{ minHeight: 310 }}
+              style={{ height: 340 }}
             />
           )}
         </div>
@@ -226,16 +253,14 @@ const Project: FC<Projectprops> = (props) => {
       initial={{ opacity: 0, y: "100px" }}
       whileInView={{ opacity: 1, y: "0px" }}
       transition={{ ease: "easeInOut", duration: 1 }}
-      className={`flex flex-col gap-4 py-4  ${
-        safeIndex % 2 == 0 ? "items-end pr-4" : "items-start pl-4"
-      }`}
+      className={`flex flex-col gap-4 py-4  ${safeIndex % 2 == 0 ? "items-end pr-4" : "items-start pl-4"
+        }`}
     >
       <p className="text-lightgreen font-ubuntu-mono">{feature}</p>
       <p className="text-name text-xl">{projectname}</p>
       <div
-        className={`bg-[#112240] h-auto w-5/6 px-4 py-4 text-article rounded-lg leading-relaxed  ${
-          safeIndex ? "text-left" : "text-right"
-        }`}
+        className={`bg-[#112240] h-auto w-5/6 px-4 py-4 text-article rounded-lg leading-relaxed  ${safeIndex ? "text-left" : "text-right"
+          }`}
       >
         {description}
       </div>
