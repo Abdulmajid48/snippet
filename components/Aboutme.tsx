@@ -50,15 +50,15 @@ const Aboutme = () => {
             transition={{ duration: 0.5 }}
             className="relative mt-5 m-auto md:m-0"
           >
-            <div className="w-80 h-[300px] border-2 border-lightgreen rounded-md relative hover:bottom-3 hover:right-3"></div>
+            <div className="w-80 h-[290px] border-2 border-lightgreen rounded-md relative hover:bottom-3 hover:right-3"></div>
             <Image
-              src="/passport.jpg"
+              src="/profilepic.jpg"
               alt=""
               height={300}
               width={300}
-              className="absolute bottom-5 right-5 rounded-md"
+              className="absolute bottom-5 right-5 rounded-md min-h-[290px]"
             />
-            <div className="w-[300px] h-[300px] absolute bottom-5 right-5 rounded-md bg-lightgreen opacity-30 hover:opacity-0"></div>
+            <div className="w-[300px] h-[290px] absolute bottom-5 right-5 rounded-md bg-lightgreen opacity-30 hover:opacity-0"></div>
           </motion.figure>
         </div>
       </div>
