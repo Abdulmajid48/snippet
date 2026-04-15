@@ -28,7 +28,7 @@ export const linkList: LinkItem[] = [
   },
   {
     linkIcon: <InstagramIcon />,
-    href: "",
+    href: "https://www.instagram.com/aladejanaamajid",
   },
 ];
 const Contactme = () => {
