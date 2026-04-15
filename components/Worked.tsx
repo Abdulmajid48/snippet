@@ -28,6 +28,19 @@ const Workplace: Workgridtype[] = [
     ],
   },
   {
+    name: "EqualCare",
+    jobtype: "Development Manager",
+    duration: "2025 - Present",
+    functions: [
+      "Led end-to-end development of a disability-inclusive digital health platform, building both the web application with Next.js and a cross-platform mobile app with React Native.",
+      "Implemented a geolocation-powered facility finder enabling users to discover nearby disability-inclusive health centres, improving accessibility to care.",
+      "Engineered accessibility-first UI with text-to-speech support and screen-reader-friendly components, ensuring compliance with inclusive design standards.",
+      "Built a real-time peer support chat system using WebSockets, fostering community engagement among users.",
+      "Architected a robust backend with NestJS and Prisma, covering JWT authentication, scheduled health reminders, email notifications, and file uploads via Nodemailer.",
+      "Integrated OpenAI APIs to power intelligent health features, and delivered polished mobile animations using Moti and Reanimated with NativeWind styling and Zustand state management.",
+    ],
+  },
+  {
     name: "Waa Ranti",
     jobtype: "Fullstack Developer (Sole Developer)",
     duration: "2025 - Present",

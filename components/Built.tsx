@@ -20,26 +20,26 @@ interface Projectprops {
 const Projects: Projectprops[] = [
   {
     feature: "Featured Project",
-    projectname: "PhysioConnect",
-    image: "/physioconnect.png",
+    projectname: "EqualCare",
+    image: "/equalcare.png",
     description:
-      "The premier community platform for Physiotherapists that integrates real-time video streaming, online courses, E-book marketplace forum chat, secure file storage, payment systems, and modern UI to connect, learn, and elevate their practice.",
+      "A disability-inclusive digital health platform, real-time peer support chat, AI-powered health features to connect users with inclusive healthcare.",
     tools: [
       "Nextjs",
+      "React Native",
       "Typescript",
       "Tailwind",
-      "MUI",
-      "Shadcn UI",
-      "Framer Motion",
+      "NativeWind",
       "Nestjs",
       "Prisma",
       "PostgreSQL",
-      "Stripe",
-      "Socket.IO",
-      "AWS S3",
+      "WebSockets",
+      "OpenAI",
+      "Moti",
+      "Zustand",
     ],
     github: "", // if public repo exists, drop the link
-    live: "https://www.physioconnect.app/", // put the live URL if deployed
+    live: "https://www.equalcare.health",   // put the live URL if deployed
   },
   {
     feature: "Featured Project",
