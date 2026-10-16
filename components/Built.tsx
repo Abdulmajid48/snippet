@@ -19,6 +19,25 @@ interface Projectprops {
 // list of the projects ive worked on
 const Projects: Projectprops[] = [
   {
+  feature: "Featured Project",
+  projectname: "PhysioConnect",
+  description:
+    "The premier community platform for physiotherapists to connect, learn, and elevate their practice. Features real-time live sessions and group chat, Stripe-powered subscriptions, role-based access, and video/audio processing with S3 media storage. Built end-to-end from concept to production.",
+  tools: [
+    "Next.js",
+    "NestJS",
+    "PostgreSQL",
+    "Prisma",
+    "Socket.IO",
+    "Stripe",
+    "Redis",
+    "AWS S3",
+  ],
+  github: "", // replace
+  live: "https://physioconnect.app",
+  image: "/physioconnect.png", // replace with your screenshot in /public/images
+},
+  {
     feature: "Featured Project",
     projectname: "EqualCare",
     image: "/equalcare.png",
