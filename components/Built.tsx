@@ -22,7 +22,7 @@ const Projects: Projectprops[] = [
   feature: "Featured Project",
   projectname: "PhysioConnect",
   description:
-    "The premier community platform for physiotherapists to connect, learn, and elevate their practice. Features real-time live sessions and group chat, Stripe-powered subscriptions, role-based access, and video/audio processing with S3 media storage. Built end-to-end from concept to production.",
+    "The premier community platform for physiotherapists to connect, learn, and elevate their practice. Features real-time live sessions and group chat, Stripe-powered subscriptions, role-based access, and video/audio processing with S3 media storage.",
   tools: [
     "Next.js",
     "NestJS",
@@ -30,6 +30,7 @@ const Projects: Projectprops[] = [
     "Prisma",
     "Socket.IO",
     "Stripe",
+    "paystack",
     "Redis",
     "AWS S3",
   ],
